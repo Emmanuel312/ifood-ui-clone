@@ -3,11 +3,10 @@ name: Sandbox
 on: pull_request
 
 jobs:
-  build:
+  core:
+    uses: ./.github/workflows/workflow-2.yml
+  publish-to-beta-testers:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - run: echo "sandbox pipeline"
+      - run: echo "publishing to beta testers..."
       
