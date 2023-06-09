@@ -6,7 +6,7 @@ on:
       - master
 jobs:
   core:
-    uses: ./.github/workflows/workflow-2.yml
+    uses: ./.github/workflows/core.yml
   publish-to-stores:
     needs: core
     runs-on: ubuntu-latest
