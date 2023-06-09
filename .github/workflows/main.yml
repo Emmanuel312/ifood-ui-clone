@@ -1,0 +1,28 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      # Aqui você pode adicionar os passos necessários para construir e testar seu aplicativo
+      # por exemplo, compilar o código, executar testes, etc.
+      
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      # Aqui você pode adicionar os passos necessários para publicar seu aplicativo
+      # por exemplo, empacotar e enviar para a loja, fazer o upload para um serviço de hospedagem, etc.
+      
