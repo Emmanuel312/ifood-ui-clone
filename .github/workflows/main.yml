@@ -7,14 +7,9 @@ on:
 jobs:
   core:
     uses: ./.github/workflows/workflow-2.yml
-  publish:
+  publish-to-stores:
     needs: core
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      # Aqui você pode adicionar os passos necessários para publicar seu aplicativo
-      # por exemplo, empacotar e enviar para a loja, fazer o upload para um serviço de hospedagem, etc.
+      - run: echo "publishing to stores"
       
