@@ -4,8 +4,9 @@ on: pull_request
 
 jobs:
   core:
-    uses: ./.github/workflows/workflow-2.yml
+    uses: ./.github/workflows/core.yml
   publish-to-beta-testers:
+    needs: core
     runs-on: ubuntu-latest
     steps:
       - run: echo "publishing to beta testers..."
