@@ -22,7 +22,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
       # Aqui você pode adicionar os passos necessários para publicar seu aplicativo
       # por exemplo, empacotar e enviar para a loja, fazer o upload para um serviço de hospedagem, etc.
       
