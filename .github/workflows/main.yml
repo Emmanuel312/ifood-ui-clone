@@ -5,18 +5,10 @@ on:
     branches:
       - master
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      # Aqui você pode adicionar os passos necessários para construir e testar seu aplicativo
-      # por exemplo, compilar o código, executar testes, etc.
-      
+  core:
+    uses: ./.github/workflows/workflow-2.yml
   publish:
-    needs: build
+    needs: core
     runs-on: ubuntu-latest
     
     steps:
